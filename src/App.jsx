@@ -86,6 +86,19 @@ export default function App() {
           </div>
         </div>
 
+        {/* Mobile Navigation Buttons - moved to top */}
+        <div className="flex lg:hidden items-center justify-center gap-3 mb-6 z-40">
+          {Object.entries(panelConfig).map(([key, { label }]) => (
+            <GlowButton
+              key={key}
+              onClick={() => setActive(key)}
+              className={active === key ? "scale-110 shadow-[0_0_25px_cyan]" : ""}
+            >
+              {label}
+            </GlowButton>
+          ))}
+        </div>
+
         {/* Panels */}
         <div className="flex-1 z-40">
           <AnimatePresence mode="wait">
@@ -99,19 +112,6 @@ export default function App() {
               {panelConfig[active].component}
             </Motion.div>
           </AnimatePresence>
-
-          {/* Top Buttons for small screens */}
-          <div className="flex lg:hidden items-center justify-center gap-3 mt-6">
-            {Object.entries(panelConfig).map(([key, { label }]) => (
-              <GlowButton
-                key={key}
-                onClick={() => setActive(key)}
-                className={active === key ? "scale-110 shadow-[0_0_25px_cyan]" : ""}
-              >
-                {label}
-              </GlowButton>
-            ))}
-          </div>
         </div>
       </div>
 
