@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#020617"/>
+  <g filter="url(#glow)">
+    <circle cx="140" cy="140" r="90" fill="#00f5ff" opacity="0.1"/>
+    <circle cx="380" cy="160" r="80" fill="#7c3aed" opacity="0.1"/>
+  </g>
+  <g stroke="url(#g)" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M120 320 H220 V220 H360"/>
+    <path d="M220 380 V280 H420"/>
+  </g>
+  <circle cx="360" cy="220" r="16" fill="#22d3ee"/>
+  <circle cx="420" cy="280" r="16" fill="#22d3ee"/>
+  <text x="50%" y="78%" text-anchor="middle" fill="#c7faff" font-family="'Space Grotesk', sans-serif" font-size="44">SHK</text>
+</svg>

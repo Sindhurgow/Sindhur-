@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+html, body {
+  background-color: #020617;
+  font-family: 'Space Grotesk', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.panel {
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  background: rgba(0,0,0,0.25);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 40px rgba(0,245,255,0.05);
+  animation: fadeInUp 0.8s cubic-bezier(0.3,1,0.3,1) forwards, floatY 6s ease-in-out infinite;
+}
+
+.panel h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #00f5ff;
+}
+
+.panel-content {
+  margin-top: 1rem;
+  color: #c7faff;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+button, .glow-btn {
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+button:hover, .glow-btn:hover {
+  box-shadow: 0 0 16px #00f5ff99, 0 0 32px #7afcff55;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.skill-chip {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.skill-chip:hover {
+  box-shadow: 0 0 12px #00f5ff99;
+  transform: scale(1.07);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Waving hand animation for greeting */
+.wave-hand {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: waveHand 2s ease-in-out infinite;
+}
+
+@keyframes waveHand {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
