@@ -87,7 +87,7 @@ export default function App() {
         </div>
 
         {/* Mobile Navigation Buttons - moved to top */}
-        <div className="flex lg:hidden items-center justify-center gap-1 mb-4 z-40 flex-wrap">
+        <div className="flex lg:hidden items-center justify-center gap-2.5 mb-4 z-40 flex-wrap">
           {Object.entries(panelConfig).map(([key, { label }]) => (
             <GlowButton
               key={key}
