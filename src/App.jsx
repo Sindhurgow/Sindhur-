@@ -87,12 +87,12 @@ export default function App() {
         </div>
 
         {/* Mobile Navigation Buttons - moved to top */}
-        <div className="flex lg:hidden items-center justify-center gap-1.5 mb-6 z-40">
+        <div className="flex lg:hidden items-center justify-center gap-1 mb-4 z-40 flex-wrap">
           {Object.entries(panelConfig).map(([key, { label }]) => (
             <GlowButton
               key={key}
               onClick={() => setActive(key)}
-              className={`text-xs px-2.5 py-1 ${active === key ? "scale-110 shadow-[0_0_25px_cyan]" : ""}`}
+              className={`text-xs px-2 py-1 whitespace-nowrap ${active === key ? "scale-105 shadow-[0_0_25px_cyan]" : ""}`}
             >
               {label}
             </GlowButton>
