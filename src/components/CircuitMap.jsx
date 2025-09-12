@@ -37,7 +37,7 @@ export default function CircuitMap({ active, setActive, panels }) {
         </motion.svg>
       )}
 
-      {/* Nodes */}
+      {/* Nodes - hidden on mobile */}
       {Object.entries(panels).map(([key, { label }]) => {
         const pos = nodePositions[key];
         if (!pos) return null;
@@ -58,7 +58,7 @@ export default function CircuitMap({ active, setActive, panels }) {
               damping: 18,
               y: { duration: 6, repeat: Infinity, ease: "easeInOut" },
             }}
-            className={`absolute px-4 py-2 rounded-full border border-cyan-400/50 text-cyan-100 font-semibold cursor-pointer
+            className={`hidden lg:block absolute px-4 py-2 rounded-full border border-cyan-400/50 text-cyan-100 font-semibold cursor-pointer
               ${isActive ? "bg-cyan-500/40 shadow-[0_0_25px_cyan]" : "bg-black/40 hover:bg-cyan-500/20 hover:shadow-[0_0_12px_cyan]"}`}
             style={{
               top: `${pos.top}%`,
