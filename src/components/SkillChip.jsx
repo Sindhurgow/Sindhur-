@@ -6,9 +6,9 @@ export default function SkillChip({ label }) {
   return (
     <motion.div
       whileHover={{ scale: 1.07, boxShadow: "0 0 12px #00f5ff99" }}
-      className="skill-chip relative px-3 py-2 rounded-lg border border-cyan-400/40 text-sm overflow-hidden cursor-pointer"
+      className="skill-chip relative px-3 py-2 rounded-lg border border-cyan-400/40 text-sm overflow-hidden cursor-pointer flex items-center justify-center"
     >
-      <span className={`${percent != null ? "opacity-100" : ""} text-xs sm:text-sm`}>{label}</span>
+      <span className={`${percent != null ? "opacity-100" : ""} text-[11px] sm:text-sm`}>{label}</span>
       {percent != null && (
         <motion.div
           initial={{ opacity: 0 }}
