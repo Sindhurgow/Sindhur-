@@ -15,7 +15,7 @@ export default function AboutPanel() {
 
       <div className="mt-4 flex items-start gap-5">
         <img
-          src="./profilepic.png"
+          src="https://ibb.co/WWkzJmHK"
           alt="Profile"
           className="w-[150px] h-[150px] rounded-full object-cover border border-cyan-400/30 shadow-[0_0_18px_rgba(0,245,255,0.35)] scale-[1.08] transition-transform"
         />
